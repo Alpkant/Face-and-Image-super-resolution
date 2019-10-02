@@ -113,6 +113,7 @@ class GEN_DEEP(nn.Module):
     def forward(self, input):
         x = self.layers_in(input)
         for ru in range(len(self.layers_set_final)):
+            print(ru)
             if ru == 0:
                 temp = self.layers_set_final[ru](x)
                 x = x + temp
